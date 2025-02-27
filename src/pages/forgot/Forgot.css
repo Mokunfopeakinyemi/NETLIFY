@@ -1,0 +1,106 @@
+.reset-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.reset-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 17px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.e-address {
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  width: 82;
+  height: 12;
+  padding: 0px;
+  color: #48494a80;
+}
+.input-field {
+  width: 303;
+  height: 16;
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0px;
+  color: #48494a99;
+  letter-spacing: 0%;
+}
+.cont-input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 351;
+  height: 32;
+  gap: 0px;
+}
+.cont-input2 {
+  width: 423.58001708984375px;
+  height: 56px;
+  gap: 8px;
+  border-radius: 8px;
+  border-width: 1.2px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border: 1.2px solid #f2f2f2;
+}
+.continue-but {
+  width: 423.58px;
+  padding: 12px 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  border: 1.2px solid #f2f2f2;
+}
+.reset {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  font-size: 28.64px;
+  line-height: 37.23px;
+  letter-spacing: -4%;
+  text-align: center;
+  color: #48494a;
+}
+.head-logo {
+  width: 40;
+  height: 40;
+  border-radius: 8px;
+}
+.signin-text {
+  font-family: "Be Vietnam Pro";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17.88px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.span-sign {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 17.88px;
+  letter-spacing: -2%;
+  text-align: center;
+  text-decoration: none;
+  color: #48494a;
+}

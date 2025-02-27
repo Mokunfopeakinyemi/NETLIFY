@@ -1,0 +1,110 @@
+.containsignup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* Ensure it stays in the middle */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  color: black;
+}
+
+.miniemail {
+  width: 32;
+  height: 12;
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  color: #48494a80;
+  text-align: left;
+}
+.containemail {
+  width: 351;
+  height: 32;
+  gap: 4px;
+}
+.email {
+  width: 303;
+  height: 16;
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #48494a99;
+  border: none;
+}
+.contup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 423.58001708984375;
+  height: 330;
+  max-width: 520px;
+  color: white;
+  gap: 17px;
+  align-self: center;
+}
+.conti {
+  font-family: "Be Vietnam Pro";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 15.25px;
+  color: white;
+  width: 423px;
+  height: 56px;
+  background-color: #2e2e2e;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.conti:hover {
+  opacity: 80%;
+  transition: 1.5s;
+}
+.calm {
+  color: black;
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  font-size: 28.64px;
+  line-height: 37.23px;
+  letter-spacing: -4%;
+  text-align: center;
+}
+.contcalm {
+  width: 424px;
+  height: 74px;
+}
+.head {
+  width: 40;
+  height: 40;
+  border-radius: 8px;
+}
+.containemail {
+  gap: 0px;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.conteem {
+  width: 423px;
+  height: 56px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+  text-align: left;
+  border: 1.2px solid #f2f2f2;
+  border-radius: 8px;
+}
+Link {
+  text-decoration: none;
+  text-decoration-line: none;
+}

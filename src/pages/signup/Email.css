@@ -1,0 +1,74 @@
+.email-confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+.email-confirmation-content {
+  text-align: center;
+  padding: 40px;
+  background-color: #e0e0e0; /* Slightly darker grey for the content area */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.email-confirmation-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #333; /* Dark grey placeholder for the icon */
+  margin: 0 auto 20px;
+  border-radius: 4px;
+}
+
+.email-confirmation-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333; /* Dark grey text */
+  text-decoration: none;
+}
+
+.email-confirmation-message {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555; /* Medium grey text */
+}
+
+.email-confirmation-button {
+  background-color: #333; /* Dark grey button */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.email-confirmation-button:hover {
+  opacity: 80%;
+  transition: 1.5s;
+}
+
+.email-confirmation-signin {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.email-confirmation-signin a {
+  color: #333;
+  text-decoration: none;
+}
+
+.email-confirmation-signin a:hover {
+  text-decoration: underline;
+}
+Link:hover{
+  opacity: 80%;
+  transition: 1.5s;
+}
