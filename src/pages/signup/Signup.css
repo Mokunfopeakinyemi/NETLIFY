@@ -37,6 +37,7 @@
   letter-spacing: 0%;
   color: #48494a99;
   border: none;
+  padding: 0px;
 }
 .contup {
   display: flex;

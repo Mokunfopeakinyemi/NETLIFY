@@ -6,76 +6,37 @@
   height: 100vh;
   background-color: #f0f0f0;
   font-family: sans-serif;
+  text-align: center;
 }
 
-.logo {
-  width: 40;
-  height: 40;
+.logo img {
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 .title {
   font-size: 1.5em;
   text-align: center;
   margin-bottom: 30px;
+  max-width: 350px;
 }
 
 .form-group {
-  width: 300px;
+  width: 350px;
   margin-bottom: 20px;
-  width: 300px;
   display: flex;
-  padding: 0px;
-  align-items: flex-start;
   flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  background-color: transparent; /* Remove white background */
-}
-
-.forgot-link {
-  font-family: "Be Vietnam Pro";
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0%;
-  color: #48494a99;
-  text-decoration: none;
-}
-
-.sign-in-button {
-  width: 300px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1em;
-}
-.sign-in-button:hover {
-  opacity: 80%;
-  transition: 1.5s;
-}
-.create-account-link {
-  margin-top: 20px;
-  text-align: center;
-}
-
-input {
-  border: none;
 }
 
 .form-group2 {
@@ -88,35 +49,81 @@ input {
   border-width: 1.2px;
   border: 1.2px solid #f2f2f2;
 }
-Link {
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.forgot-link {
+  font-family: "Be Vietnam Pro";
+  font-weight: 500;
+  font-size: 14px;
+  color: #48494a99;
   text-decoration: none;
 }
-.emails {
-  font-family: "Be Vietnam Pro";
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0%;
-  color: #48494a99;
+
+.sign-in-button {
+  width: 350px;
+  padding: 12px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 10px;
 }
-.emaillog {
-  font-family: "Be Vietnam Pro";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0%;
-  color: #48494a99;
+
+.sign-in-button:hover {
+  opacity: 80%;
+  transition: 1.5s;
 }
+
+.create-account-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
 .create {
   font-family: "Be Vietnam Pro";
   font-weight: 700;
   font-size: 15px;
-  line-height: 17.88px;
-  letter-spacing: -2%;
   text-align: center;
   color: #48494a;
   text-decoration: none;
 }
+
+.create:hover {
+  opacity: 80%;
+  transition: 1.5s;
+}
+
+.emails {
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  font-size: 12px;
+  color: #48494a99;
+}
+
+.emaillog {
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  font-size: 14px;
+  color: #48494a99;
+  padding-left: 0px;
+}
+
+Link {
+  text-decoration: none;
+}
+
 Link:hover {
   opacity: 80%;
   transition: 1.5s;
