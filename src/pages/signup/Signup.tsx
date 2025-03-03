@@ -1,13 +1,13 @@
-import React from "react";
 import head from "../signup/head.png";
 import "./Signup.css";
+import Button from "../../button";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
     <div className="containsignup">
       <div className="contup">
-        <img className="head" src={head} alt="" />
+        <img className="head" src={head} alt="Signup Header" />
         <div className="contcalm">
           <p className="calm">
             Calm and productive email experience for your team
@@ -15,17 +15,19 @@ const Signup = () => {
         </div>
         <div className="containemail">
           <div className="conteem">
-            <p className="miniemail">Email</p>
-            <input
-              type="text"
-              className="email"
-              placeholder="Enter your email address"
-            />
+            <div className="form-group2">
+              <p className="miniemail">Email</p>
+              <input
+                type="password"
+                className="emaillog"
+                placeholder="Enter your password"
+              />
+            </div>
           </div>
         </div>
         <div className="contconti">
-          <Link to="/email">
-            <p className="conti">Continue</p>
+          <Link to="/">
+            <Button text="Continue" />
           </Link>
         </div>
       </div>

@@ -44,6 +44,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  padding-left: 0px;
   letter-spacing: 0%;
 }
 
@@ -103,10 +104,16 @@
   justify-content: center;
   width: calc(100% - 24px);
   border: 1px solid #ccc;
+  gap: 0px;
   border-radius: 4px;
   font-size: 16px;
-  padding: 12px;
+  padding-left: 12px;
   padding-top: 0px;
+}
+.signhead {
+  width: 40;
+  height: 40;
+  border-radius: 8px;
 }
 .mini {
   font-family: "Be Vietnam Pro";
@@ -115,4 +122,5 @@
   line-height: 12px;
   letter-spacing: 0%;
   color: #48494a80;
+  padding-left: 0px;
 }

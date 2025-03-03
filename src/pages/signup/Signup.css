@@ -1,111 +1,108 @@
+/* General Page Layout */
 .containsignup {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; /* Ensure it stays in the middle */
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100vw;
   height: 100vh;
+  background-color: #e0e0e0;
+}
+
+/* Signup Box */
+.contup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 424px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Image */
+.head {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.calm {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
   color: black;
+  margin-bottom: 20px;
+}
+
+/* Input Section */
+.containemail {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .miniemail {
-  width: 32;
-  height: 12;
   font-family: "Be Vietnam Pro";
-  font-weight: 400;
   font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0%;
-  color: #48494a80;
+  font-weight: 500;
+  color: #888;
   text-align: left;
 }
-.containemail {
-  width: 351;
-  height: 32;
-  gap: 4px;
-}
-.email {
-  width: 303;
-  height: 16;
-  font-family: "Be Vietnam Pro";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0%;
-  color: #48494a99;
-  border: none;
-  padding: 0px;
-}
-.contup {
+
+/* Input Field Container */ /* Input Field Container (Stacked Elements) */
+.form-group2 {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  width: 423.58001708984375;
-  height: 330;
-  max-width: 520px;
-  color: white;
-  gap: 17px;
-  align-self: center;
+  width: 350px;
 }
+
+/* Input Field */
+.emaillog {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #48494a;
+  padding: 8px;
+  background: transparent;
+  padding-left: 25px;
+}
+
+/* Input Field Focus Effect */
+.form-group2:focus-within {
+  border-color: #333;
+}
+
+/* Continue Button */
+.contconti {
+  width: 100%;
+}
+
 .conti {
-  font-family: "Be Vietnam Pro";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 15.25px;
-  color: white;
-  width: 423px;
-  height: 56px;
+  width: 100%;
+  padding: 15px;
   background-color: #2e2e2e;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
   border-radius: 12px;
-  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
+
 .conti:hover {
   opacity: 80%;
-  transition: 1.5s;
 }
-.calm {
-  color: black;
-  font-family: "Be Vietnam Pro";
-  font-weight: 700;
-  font-size: 28.64px;
-  line-height: 37.23px;
-  letter-spacing: -4%;
-  text-align: center;
-}
-.contcalm {
-  width: 424px;
-  height: 74px;
-}
-.head {
-  width: 40;
-  height: 40;
-  border-radius: 8px;
-}
-.containemail {
-  gap: 0px;
-  display: flex;
-  align-self: flex-start;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  padding-top: 20px;
-}
-.conteem {
-  width: 423px;
-  height: 56px;
-  padding-left: 16px;
-  padding-bottom: 12px;
-  text-align: left;
-  border: 1.2px solid #f2f2f2;
-  border-radius: 8px;
-}
+
+/* Remove Link Styles */
 Link {
   text-decoration: none;
-  text-decoration-line: none;
 }

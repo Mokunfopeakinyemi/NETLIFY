@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0;
   font-family: sans-serif;
   text-align: center;
+  background-color: #e0e0e0;
 }
 
 .logo img {
@@ -25,13 +25,25 @@
 }
 
 .form-group {
-  width: 350px;
+  width: 423px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   text-align: left;
   align-items: flex-start;
   justify-content: flex-start;
+  border-radius: 8px;
+  border-width: 1.2px;
+  padding: 9px;
+  background-color: #f0f0f0;
+}
+.form-group:focus {
+  border: 1.2px solid #333;
+}
+.ogo {
+  width: 40;
+  height: 40;
+  border-radius: 8px;
 }
 
 label {
@@ -39,15 +51,11 @@ label {
   margin-bottom: 5px;
 }
 
-.form-group2 {
+.form-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 350px;
-  height: 56px;
-  border-radius: 8px;
-  border-width: 1.2px;
-  border: 1.2px solid #f2f2f2;
+  width: 100%;
 }
 
 input {
@@ -110,14 +118,16 @@ input {
   font-weight: 400;
   font-size: 12px;
   color: #48494a99;
+  padding: 0px;
 }
 
-.emaillog {
+.emaillogin {
+  width: 432px;
   font-family: "Be Vietnam Pro";
   font-weight: 400;
   font-size: 14px;
   color: #48494a99;
-  padding-left: 0px;
+  padding: 0px;
 }
 
 Link {

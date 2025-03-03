@@ -6,7 +6,7 @@ function SignupForm() {
   return (
     <div className="signup-container">
       <div className="signup-content">
-        <div className="signup-icon"><img src={head} alt="" /></div>
+        <div className="signup-icon"><img src={head} className="signhead" alt="" /></div>
         <h2 className="signup-title">
           Calm and productive <br />
           email experience for your team

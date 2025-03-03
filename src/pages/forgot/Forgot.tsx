@@ -1,7 +1,8 @@
 import React from "react";
 import "./Forgot.css";
 import { Link } from "react-router-dom";
-import head from "../forgot/head.png"
+import head from "../forgot/head.png";
+import Button from "../../button";
 
 const Forgot = () => {
   return (
@@ -19,9 +20,13 @@ const Forgot = () => {
             />
           </div>
         </div>
-      <Link className="continue-but" to="/">Continue</Link>
+
+        <Button text="Continue" />
         <p className="signin-text">
-          Just remembered your password? <Link to="/login" className="span-sign">Sign in</Link>
+          Just remembered your password?{" "}
+          <Link to="/login" className="span-sign">
+            Sign in
+          </Link>
         </p>
       </div>
     </div>
