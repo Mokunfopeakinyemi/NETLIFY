@@ -1,0 +1,94 @@
+/* Center everything on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container styling */
+.containercheck {
+  /* height: 296px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  border-radius: 10px;
+  padding-left: 43.79px;
+  padding-right: 43.79px;
+}
+
+/* Icon Placeholder */
+.icon-placeholder {
+  width: 40;
+  height: 40;
+}
+
+/* Title styling */
+.title {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  font-size: 28.64px;
+  line-height: 37.23px;
+  letter-spacing: -4%;
+  text-align: center;
+}
+
+/* Message text */
+.message {
+  font-family: "Be Vietnam Pro";
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 336px;
+  height: 68px;
+}
+
+/* Button styling */
+.btn {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+/* Sign-in text */
+.signin-text {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #555;
+}
+
+/* Sign-in link */
+.signin-link {
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signin-link:hover {
+  text-decoration: underline;
+}
+.open {
+  text-decoration: none;
+  padding: 0px;
+}
+.headcheck {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+Link {
+  text-decoration: none;
+}
+.signcheck {
+  text-decoration: none;
+}

@@ -20,11 +20,13 @@ const Forgot = () => {
             />
           </div>
         </div>
-
-        <Button text="Continue" />
+        <Link className="tres" to="/">
+          {" "}
+          <Button text="Continue" />
+        </Link>
         <p className="signin-text">
           Just remembered your password?{" "}
-          <Link to="/login" className="span-sign">
+          <Link to="/" className="span-sign">
             Sign in
           </Link>
         </p>

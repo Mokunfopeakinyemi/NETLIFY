@@ -14,7 +14,7 @@ function EmailConfirmation() {
         <p className="email-confirmation-message">
           No email? Check spam folder.
         </p>
-        <Link to="/login" className="email-confirmation-button">Open Gmail</Link>
+        <Link to="/check" className="email-confirmation-button">Open Gmail</Link>
         <p className="email-confirmation-signin">
           Already have an account? <Link  to="/login">Sign In</Link>
         </p>

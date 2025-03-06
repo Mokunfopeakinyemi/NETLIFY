@@ -6,6 +6,8 @@ import EmailConfirmation from "./pages/signup/Email";
 import Last from "./pages/signup/Last";
 import LoginForm from "./pages/signin/Login";
 import Forgot from "./pages/forgot/Forgot";
+import CheckInbox from "./pages/forgot/Check";
+import ResetPassword from "./pages/forgot/Setnew";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/last" element={<Last />}></Route>
           <Route path="/login" element={<LoginForm />} />
           <Route path="/forgot" element={<Forgot />} />
+          <Route path="/check" element={<CheckInbox />} />
+          <Route path="/set" element={<ResetPassword />} />
         </Routes>
       </BrowserRouter>
     </div>
