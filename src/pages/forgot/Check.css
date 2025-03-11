@@ -1,32 +1,30 @@
-/* Center everything on the page */
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
 }
 
-/* Container styling */
 .containercheck {
-  /* height: 296px; */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 423.58001708984375px;
+  height: 296px;
   gap: 17px;
-  border-radius: 10px;
-  padding-left: 43.79px;
-  padding-right: 43.79px;
+  max-width: 520px;
+  top: 364px;
+  left: 508px;
 }
-
-/* Icon Placeholder */
-.icon-placeholder {
-  width: 40;
-  height: 40;
+.contti {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
 }
-
-/* Title styling */
 .title {
   font-family: "Be Vietnam Pro";
   font-weight: 700;
@@ -34,48 +32,33 @@ body {
   line-height: 37.23px;
   letter-spacing: -4%;
   text-align: center;
+  color: #48494a;
 }
 
-/* Message text */
 .message {
   font-family: "Be Vietnam Pro";
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 22.4px;
   letter-spacing: 0%;
   text-align: center;
+  vertical-align: middle;
   width: 336px;
   height: 68px;
 }
-
-/* Button styling */
-.btn {
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-
-/* Sign-in text */
 .signin-text {
-  font-size: 14px;
-  margin-top: 15px;
-  color: #555;
+  font-family: "Be Vietnam Pro";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17.88px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #48494A;
 }
-
-/* Sign-in link */
 .signin-link {
   color: #000;
-  font-weight: bold;
   cursor: pointer;
-}
-
-.signin-link:hover {
-  text-decoration: underline;
 }
 .open {
   text-decoration: none;
@@ -91,4 +74,12 @@ Link {
 }
 .signcheck {
   text-decoration: none;
+  font-family: "Be Vietnam Pro";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17.88px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #48494A;
 }

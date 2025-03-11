@@ -11,16 +11,21 @@ const CheckInbox = () => {
         <div>
           <img src={head} className="headcheck" alt="" />
         </div>
-        <h2 className="title">Check your inbox!</h2>
-        <p className="message">
-          If this email address was used to create an account, instructions to
-          reset your password will be sent to you.
-        </p>
+        <div className="contti">
+          <h2 className="title">Check your inbox!</h2>
+          <p className="message">
+            If this email address was used to create an account, instructions to
+            reset your password will be sent to you.
+          </p>
+        </div>
         <Link className="open" to="/set">
           <Button text="Open Gmail" />
         </Link>
         <p className="signin-text">
-          Just remembered your password? <Link to="/login" className="signcheck">Sign In</Link>
+          Just remembered your password?{" "}
+          <Link to="/login" className="signcheck">
+            Sign In
+          </Link>
         </p>
       </div>
     </div>

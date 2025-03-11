@@ -4,12 +4,10 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  gap: 17px; 
   font-family: sans-serif;
   text-align: center;
-  padding: 40px;
-  width: 423.58px;
 }
-
 .logo img {
   width: 40px;
   height: 40px;
@@ -18,11 +16,16 @@
   margin: 0 auto;
 }
 
-.title {
-  font-size: 1.5em;
+.title-login {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  font-size: 2.864rem;
+  line-height: 130%;
+  letter-spacing: -4%;
   text-align: center;
-  margin-bottom: 30px;
-  max-width: 350px;
+  vertical-align: middle;
+  max-width: 424px;
+  white-space: nowrap;
 }
 
 .form-group-login {
@@ -41,7 +44,6 @@
   padding-left: 16px;
   padding-right: 16px;
   gap: 0px;
-  background-color: #f0f0f0;
 }
 .form-group:focus {
   border: 1.2px solid #333;
@@ -100,12 +102,11 @@ input {
   transition: 1.5s;
 }
 
-.create-account-link {
-  margin-top: 20px;
+.create-account-link-login {
   text-align: center;
 }
 
-.create {
+.create-login {
   font-family: "Be Vietnam Pro";
   font-weight: 700;
   font-size: 15px;

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Setnew.css";
 import Button from "../../button";
+import Input from "../../assets/input";
 import head from "./head.png";
 const ResetPassword = () => {
   return (
@@ -9,33 +10,21 @@ const ResetPassword = () => {
       <div>
         <img src={head} className="headset" alt="" />
       </div>
-      <h2 className="title">Set a new password</h2>{" "}
-      <div className="form-groupset">
-        <label className="emails">Password</label>
-        <div className="form-set">
-          <input
-            type="password"
-            className="emailset"
-            placeholder="Enter your password"
-          />
-        </div>
-      </div>
-      <div className="form-groupset">
-        <label className="emails">Confirm your Password</label>
-        <div className="form-set">
-          <input
-            type="password"
-            className="emailset"
-            placeholder="Enter your password"
-          />
-        </div>
-      </div>
+      <h2 className="titleset">Set a new password</h2>{" "}
+      <Input
+        label="Email Address"
+        text="Enter your email address"
+        forgot="forgot"
+      />
+      <Input label="Password" text="Enter your Password" forgot="" />
       <Link className="butset" to="">
         <Button text="Set new password" />
       </Link>
       <p className="signin-text">
-        Just remembered your password?{" "}
-        <Link to="/login" className="signin-link">Sign In</Link>
+        {" "}
+        <Link to="/login" className="signin-link">
+          Just remembered your password? Sign In
+        </Link>
       </p>
     </div>
   );

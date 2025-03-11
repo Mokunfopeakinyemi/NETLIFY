@@ -5,53 +5,40 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #fff;
   font-family: Arial, sans-serif;
 }
-.butset{
+.butset {
   text-decoration: none;
 }
 /* Container styling */
 .containerset {
   text-align: center;
-  background-color: #fff;
   color: #333;
-  padding: 30px;
   border-radius: 10px;
   width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 17px;
 }
 
 /* Icon Placeholder */
 .icon-placeholder {
   width: 50px;
   height: 50px;
-  background-color: #ddd;
-  margin: 0 auto 10px;
   border-radius: 50%;
 }
 
 /* Title styling */
-.title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-/* Input field styling */
-.input-group {
-  text-align: left;
-  margin-bottom: 15px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 5px;
+.titleset {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  font-size: 28.64px;
+  line-height: 130%;
+  letter-spacing: -4%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .input-group input {
@@ -114,7 +101,6 @@ body {
   height: 100vh;
   font-family: sans-serif;
   text-align: center;
-  background-color: #e0e0e0;
 }
 
 .logo img {
@@ -122,19 +108,10 @@ body {
   height: 40px;
   border-radius: 8px;
   display: block;
-  margin: 0 auto;
-}
-
-.title {
-  font-size: 1.5em;
-  text-align: center;
-  margin-bottom: 30px;
-  max-width: 350px;
 }
 
 .form-groupset {
   width: 350px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -143,7 +120,6 @@ body {
   border-radius: 8px;
   border-width: 1.2px;
   padding: 9px;
-  background-color: #f0f0f0;
   width: 403px;
 }
 .form-group:focus {
@@ -157,23 +133,96 @@ body {
 
 label {
   display: block;
-  margin-bottom: 5px;
+}/* Center everything on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
+
+/* Remove text underline from links */
+a {
+  text-decoration: none;
+}
+
+/* Container styling */
+.containerset {
+  text-align: center;
+  color: #333;
+  border-radius: 10px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+}
+
+/* Title styling */
+.titleset {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  font-size: 28.64px;
+  line-height: 130%;
+  letter-spacing: -4%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Button styling */
+.butset {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/* Sign-in text */
+.signin-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Sign-in link */
+.signin-link {
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signin-link:hover {
+  opacity: 80%;
+}
+
+/* Header image */
+.headset {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
 
 .form-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  font-size: 14px;
 }
 
 .forgot-link {
@@ -237,13 +286,4 @@ input {
   font-size: 14px;
   color: #48494a99;
   padding: 0px;
-}
-
-Link {
-  text-decoration: none;
-}
-
-Link:hover {
-  opacity: 80%;
-  transition: 1.5s;
 }

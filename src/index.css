@@ -1,16 +1,19 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Be Vietnam Pro";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+  font-size: 62.5%;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Be Vietnam Pro";
   font-weight: 100;
@@ -154,6 +157,6 @@ code {
   src: url("../src/assets/fonts/Be_Vietnam_Pro/BeVietnamPro-BlackItalic.ttf")
     format("truetype");
 }
-Link{
+Link {
   text-decoration: none;
 }

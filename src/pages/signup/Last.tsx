@@ -1,6 +1,7 @@
 import React from "react";
 import head from "../signup/head.png";
 import "./Last.css";
+import Input from "../../assets/input";
 import Button from "../../button";
 
 function SignupForm() {
@@ -15,42 +16,14 @@ function SignupForm() {
           email experience for your team
         </h2>
         <div className="contcon2">
-          <div className="contimintype">
-            <p className="minipas">Company name</p>
-            <input
-              type="text"
-              placeholder="Enter your Company name"
-              className="signup-inputpas"
-            />
-          </div>
+          <Input label="Company name" text="Enter Company name" forgot="" />
         </div>
         <div className="name-inputs">
-          <div className="contimin2">
-            <p className="minipas">First Name</p>
-            <input
-              type="text"
-              placeholder="Enter your first name"
-              className="signupinput-pas"
-            />
-          </div>
-          <div className="contimin2">
-            <p className="minipas">Last Name</p>
-            <input
-              type="text"
-              placeholder="Enter your Last name"
-              className="signupinput-pas"
-            />
-          </div>
+          <Input label="First name" width="203.29px" text="Enter First name" forgot="" />
+          <Input label="Last name" width="203.29px" text="Enter Last name" forgot="" />
         </div>
         <div className="contcon21">
-          <div className="contimintype">
-            <p className="minipas">Password</p>
-            <input
-              type="password"
-              placeholder="Enter your Password"
-              className="signup-inputpas"
-            />
-          </div>
+          <Input label="Password" text="Enter Your Password" forgot="" />
         </div>
         <Button text="Start your 14 days trial" />
         <p className="signup-terms">

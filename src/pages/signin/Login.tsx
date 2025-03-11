@@ -3,6 +3,7 @@ import "./Login.css";
 import { Link } from "react-router-dom";
 import head from "../signup/head.png";
 import Button from "../../button";
+import Input from "../../assets/input";
 
 function LoginForm() {
   return (
@@ -11,43 +12,22 @@ function LoginForm() {
         <div className="logo">
           <img className="ogo" src={head} alt="" />
         </div>
-        <h1 className="title">
+        <p className="title-login">
           Calm and productive <br /> email experience for your team
-        </h1>
-        <div className="form-g">
-          <div className="form-group-login">
-            <label className="emails-login">Email address</label>
-            <div className="form-link">
-              <input
-                type="email"
-                className="emaillogin"
-                placeholder="Enter your email address"
-              />
-              <Link to="/forgot" className="forgot-link">
-                Forgot
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="form-g">
-          <div className="form-group-login">
-            <label className="emails-login">Password</label>
-            <div className="form-group2-login">
-              <input
-                type="password"
-                className="emaillogin"
-                placeholder="Enter your password"
-              />
-            </div>
-          </div>
-        </div>
+        </p>
+          <Input
+            label="Email Address"
+            text="Enter your email address"
+            forgot="forgot"
+          />
+          <Input label="Password" text="Enter your password" forgot="" />
 
         <Button text="Sign In" />
 
-        <p className="create-account-link">
-          New to Avail?{" "}
-          <Link className="create" to="/last">
-            Create an account
+        <p className="create-account-link-login">
+          {" "}
+          <Link className="create-login" to="/last">
+            New to Avail? Create an account
           </Link>
         </p>
       </div>
