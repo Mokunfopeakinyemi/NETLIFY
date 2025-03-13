@@ -14,9 +14,9 @@ const ResetPassword = () => {
       <Input
         label="Email Address"
         text="Enter your email address"
-        forgot="forgot"
+        forgot=""
       />
-      <Input label="Password" text="Enter your Password" forgot="" />
+      <Input label="Password" text="Enter your Password" forgot="forgot" />
       <Link className="butset" to="">
         <Button text="Set new password" />
       </Link>

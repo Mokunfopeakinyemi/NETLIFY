@@ -22,9 +22,8 @@ const CheckInbox = () => {
           <Button text="Open Gmail" />
         </Link>
         <p className="signin-text">
-          Just remembered your password?{" "}
           <Link to="/login" className="signcheck">
-            Sign In
+            Just remembered your password? Sign In
           </Link>
         </p>
       </div>

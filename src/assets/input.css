@@ -5,6 +5,9 @@
   line-height: 16px;
   letter-spacing: 0%;
   vertical-align: middle;
+  border: none; /* Remove the border from the input */
+  outline: none; /* Remove the outline on focus */
+  width: 100%; /* Make the input take the full width */
 }
 
 .emails-login {
@@ -16,27 +19,33 @@
 }
 
 .form-group-logininput {
-  width: 423.58px;
+  width: 498.58px;
   display: flex;
-  flex-direction: column;
   height: 56px;
   gap: 4px;
-  align-items: flex-start;
+  align-items: center;
   border-radius: 8px;
   border: 1.2px solid #f0f0f0;
   padding: 0px 16px;
-  justify-content: center; /* Ensures everything is vertically centered */
+  justify-content: space-between;
+}
+
+.form-group-logininput:hover {
+  border-color: #333;
+  transition: 0.3s;
 }
 
 .form-group-logininput:focus-within {
   border-color: #333;
 }
 
-.form-link {
+.form-label-container {
   display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 303px;
+  padding: 0px;
+  justify-content: space-between; /* Distribute space between label and link */
+  align-items: flex-start; /* Align items vertically in the center */
 }
 
 .forgot-link {

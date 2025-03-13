@@ -18,9 +18,9 @@ function LoginForm() {
           <Input
             label="Email Address"
             text="Enter your email address"
-            forgot="forgot"
+            forgot=""
           />
-          <Input label="Password" text="Enter your password" forgot="" />
+          <Input label="Password" text="Enter your password" forgot="forgot" />
 
         <Button text="Sign In" />
 

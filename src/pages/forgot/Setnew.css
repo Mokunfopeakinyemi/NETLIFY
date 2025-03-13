@@ -125,15 +125,11 @@ body {
 .form-group:focus {
   border: 1.2px solid #333;
 }
-.ogo {
-  width: 40;
-  height: 40;
-  border-radius: 8px;
-}
 
 label {
   display: block;
-}/* Center everything on the page */
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -143,12 +139,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Remove text underline from links */
-a {
-  text-decoration: none;
-}
-
-/* Container styling */
 .containerset {
   text-align: center;
   color: #333;
@@ -161,7 +151,6 @@ a {
   gap: 17px;
 }
 
-/* Title styling */
 .titleset {
   font-family: "Be Vietnam Pro";
   font-weight: 700;
@@ -172,7 +161,6 @@ a {
   vertical-align: middle;
 }
 
-/* Button styling */
 .butset {
   text-decoration: none;
 }
@@ -193,24 +181,21 @@ a {
   background-color: #333;
 }
 
-/* Sign-in text */
 .signin-text {
   font-size: 14px;
   color: #555;
 }
 
-/* Sign-in link */
 .signin-link {
   color: #000;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .signin-link:hover {
   opacity: 80%;
 }
-
-/* Header image */
 .headset {
   width: 40px;
   height: 40px;
@@ -244,7 +229,6 @@ a {
   text-decoration: none;
   font-size: 1em;
   text-align: center;
-  margin-top: 10px;
 }
 
 .sign-in-button:hover {
