@@ -84,10 +84,6 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
-.signin-link:hover {
-  text-decoration: underline;
-}
 .headset {
   width: 40px;
   height: 40px;
@@ -164,6 +160,10 @@ body {
 .butset {
   text-decoration: none;
 }
+.butset:hover {
+  opacity: 80%;
+  transition: 0.3s;
+}
 
 .btn {
   background-color: #000;
@@ -187,7 +187,7 @@ body {
 }
 
 .signin-link {
-  color: #000;
+  color: #48494a;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
@@ -195,13 +195,13 @@ body {
 
 .signin-link:hover {
   opacity: 80%;
+  transition: 0.3s;
 }
 .headset {
   width: 40px;
   height: 40px;
   border-radius: 8px;
 }
-
 
 .form-link {
   display: flex;
@@ -237,7 +237,6 @@ body {
 }
 
 .create-account-link {
-  margin-top: 20px;
   text-align: center;
 }
 

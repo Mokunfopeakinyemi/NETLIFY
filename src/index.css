@@ -160,3 +160,6 @@ html {
 Link {
   text-decoration: none;
 }
+Link:hover{
+  opacity: 80%;
+}

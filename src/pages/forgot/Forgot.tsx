@@ -21,7 +21,7 @@ const Forgot = () => {
           <Button text="Continue" />
         </Link>
         <p className="signin-text">
-          <Link to="/" className="span-sign">
+          <Link to="/set" className="span-sign">
             Just remembered your password? Sign in
           </Link>
         </p>

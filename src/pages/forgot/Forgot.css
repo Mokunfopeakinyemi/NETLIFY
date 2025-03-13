@@ -104,3 +104,7 @@
   text-decoration: none;
   color: #48494a;
 }
+.span-sign:hover{
+  opacity: 80%;
+  transition: 0.3s;
+}
