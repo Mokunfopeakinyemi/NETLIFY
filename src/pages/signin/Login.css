@@ -4,9 +4,10 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  gap: 17px; 
+  gap: 17px;
   font-family: sans-serif;
   text-align: center;
+  background-color: #fafafa;
 }
 .logo img {
   width: 40px;
@@ -31,7 +32,6 @@
 .form-group-login {
   width: 387px;
   height: 32px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -56,7 +56,6 @@
 
 label {
   display: block;
-  margin-bottom: 5px;
 }
 
 .form-link {
@@ -94,7 +93,6 @@ input {
   text-decoration: none;
   font-size: 1em;
   text-align: center;
-  margin-top: 10px;
 }
 
 .sign-in-button:hover {
@@ -156,4 +154,7 @@ Link:hover {
   padding-bottom: 12px;
   padding-left: 16px;
   border: 1.2px solid #f2f2f2;
+}
+.containtype {
+  background-color: #fafafa;
 }

@@ -1,108 +1,29 @@
-/* General Page Layout */
-.containsignup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  height: 100vh;
-  background-color: #e0e0e0;
-}
-
-/* Signup Box */
 .contup {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 424px;
-  padding: 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Header Image */
-.head {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-/* Title */
-.calm {
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-  color: black;
-  margin-bottom: 20px;
-}
-
-/* Input Section */
-.containemail {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.miniemail {
-  font-family: "Be Vietnam Pro";
-  font-size: 12px;
-  font-weight: 500;
-  color: #888;
-  text-align: left;
-}
-
-/* Input Field Container */ /* Input Field Container (Stacked Elements) */
-.form-group2 {
-  display: flex;
+  gap: 17px;
   flex-direction: column;
-  width: 350px;
+  width: 423.58px;
+  top: 273px;
+  left: 508px;
+  height: 100%;
+  background-color: #fafafa;
+  gap: 17px;
 }
-
-/* Input Field */
-.emaillog {
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  color: #48494a;
-  padding: 8px;
-  background: transparent;
-  padding-left: 25px;
-}
-
-/* Input Field Focus Effect */
-.form-group2:focus-within {
-  border-color: #333;
-}
-
-/* Continue Button */
-.contconti {
-  width: 100%;
-}
-
-.conti {
-  width: 100%;
-  padding: 15px;
-  background-color: #2e2e2e;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
+.calm {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 130%;
+  letter-spacing: -4%;
   text-align: center;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: opacity 0.3s;
+  vertical-align: middle;
 }
-
-.conti:hover {
-  opacity: 80%;
-}
-
-/* Remove Link Styles */
 Link {
   text-decoration: none;
+}
+.head-cont {
+  width: 40px;
+  height: 40px;
 }

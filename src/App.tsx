@@ -14,10 +14,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/email" element={<Signup />}></Route>
-          <Route path="/" element={<EmailConfirmation />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/emailconfirm" element={<EmailConfirmation />}></Route>
           <Route path="/last" element={<Last />}></Route>
-          <Route path="/login" element={<LoginForm />} />
+          <Route path="/" element={<LoginForm />} />
           <Route path="/forgot" element={<Forgot />} />
           <Route path="/check" element={<CheckInbox />} />
           <Route path="/set" element={<ResetPassword />} />

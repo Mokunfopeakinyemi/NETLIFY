@@ -26,7 +26,7 @@ function LoginForm() {
 
         <p className="create-account-link-login">
           {" "}
-          <Link className="create-login" to="/last">
+          <Link className="create-login" to="/signup">
             New to Avail? Create an account
           </Link>
         </p>

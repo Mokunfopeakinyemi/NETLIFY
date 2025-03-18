@@ -16,12 +16,12 @@ const Forgot = () => {
           text="Enter Your Email Address"
           forgot=""
         />
-        <Link className="tres" to="/">
+        <Link className="tres" to="/emailconfirm">
           {" "}
           <Button text="Continue" />
         </Link>
         <p className="signin-text">
-          <Link to="/set" className="span-sign">
+          <Link to="/" className="span-sign">
             Just remembered your password? Sign in
           </Link>
         </p>

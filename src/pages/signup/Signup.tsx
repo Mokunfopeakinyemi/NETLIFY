@@ -8,7 +8,7 @@ const Signup = () => {
   return (
     <div className="containsignup">
       <div className="contup">
-        <img className="head" src={head} alt="Signup Header" />
+        <img className="head-cont" src={head} alt="Signup Header" />
         <div className="contcalm">
           <p className="calm">
             Calm and productive email experience for your team
@@ -22,7 +22,7 @@ const Signup = () => {
           </div>
         </div>
         <div className="contconti">
-          <Link to="/">
+          <Link to="/last">
             <Button text="Continue" />
           </Link>
         </div>

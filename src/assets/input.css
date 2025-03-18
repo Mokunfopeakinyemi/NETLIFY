@@ -31,12 +31,12 @@
 }
 
 .form-group-logininput:hover {
-  border-color: #333;
+  border-color: #e3e8ef;
   transition: 0.3s;
 }
 
 .form-group-logininput:focus-within {
-  border-color: #333;
+  border-color: #e3e8ef;
 }
 
 .form-label-container {

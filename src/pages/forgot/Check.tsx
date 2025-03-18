@@ -22,7 +22,7 @@ const CheckInbox = () => {
           <Button text="Open Gmail" />
         </Link>
         <p className="signin-text">
-          <Link to="/login" className="signcheck">
+          <Link to="/" className="signcheck">
             Just remembered your password? Sign In
           </Link>
         </p>

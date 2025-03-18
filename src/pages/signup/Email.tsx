@@ -20,7 +20,7 @@ function EmailConfirmation() {
           Open Gmail
         </Link>
         <p className="email-confirmation-signin">
-          <Link to="/login"> Already have an account? Sign In</Link>
+          <Link to="/"> Already have an account? Sign In</Link>
         </p>
       </div>
     </div>

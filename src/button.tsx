@@ -22,6 +22,7 @@ const Button = ({ text }: ButtonProps) => {
     textDecoration: "none",
     opacity: isHovered ? 0.8 : 1,
     transition: "opacity 1.5s",
+    cursor: "pointer"
   };
 
   return (
