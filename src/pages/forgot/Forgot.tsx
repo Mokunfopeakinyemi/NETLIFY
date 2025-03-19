@@ -16,7 +16,7 @@ const Forgot = () => {
           text="Enter Your Email Address"
           forgot=""
         />
-        <Link to="/emailconfirm">
+        <Link className="confirm" to="/emailconfirm">
           {" "}
           <Button text="Continue" />
         </Link>

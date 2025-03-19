@@ -106,3 +106,6 @@
   opacity: 80%;
   transition: 0.3s;
 }
+.confirm{
+  text-decoration: none;
+}
