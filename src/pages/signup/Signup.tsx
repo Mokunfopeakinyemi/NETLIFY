@@ -22,7 +22,7 @@ const Signup = () => {
           </div>
         </div>
         <div className="contconti">
-          <Link to="/last">
+          <Link className="last-link" to="/last">
             <Button text="Continue" />
           </Link>
         </div>
