@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\pages",
+    "\\src\\pages\\signin",
+    "\\src\\pages\\signup",
+    "\\src\\pages\\token"
+  ],
+  "SelectedNode": "\\src\\pages\\signup\\Signup.tsx",
+  "PreviewInSolutionExplorer": false
+}
