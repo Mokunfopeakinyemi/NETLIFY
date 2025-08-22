@@ -1,38 +1,27 @@
-import React, {
-  useRef,
-  useState,
-  useEffect,
-  useCallback,
-  useContext,
-  useMemo,
-} from "react";
-import { Link } from "react-router-dom";
+import React, { useRef, useState, useEffect, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 import "../signup/Last.css";
 import head from "../signup/head.png";
 import Button from "../../button";
 import Input from "../../assets/input";
 import EmailConfirmation from "../signup/Email";
-import AuthContext from "../AuthProvider";
-import apiClient from "../../api/axios";
+import axios from "axios";
 
-const REGISTER_URL = "/api/user/register";
+const baseUrl = "https://stage.api.withavail.com";
 
-const LoginForm = () => {
-  const authContext = useContext(AuthContext);
-
-  if (!authContext) {
-    throw new Error("AuthContext must be used within an AuthProvider");
-  }
-
-  const { setAuth } = useMemo(() => authContext, [authContext]);
-
+const CompleteProfileForm: React.FC = () => {
   const userRef = useRef<HTMLInputElement>(null);
-  const [user, setUser] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [firstName, setFirstName] = useState<string>("");
-  const [lastName, setLastName] = useState<string>("");
+  const location = useLocation();
+
+  const { token } = location.state || {};
+  const [organizationName, setOrganizationName] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<boolean>(false);
+  const [success, setSuccess] = useState(false);
+
+  console.log("Received token:", token);
 
   useEffect(() => {
     userRef.current?.focus();
@@ -40,36 +29,55 @@ const LoginForm = () => {
 
   useEffect(() => {
     if (error) setError(null);
-  }, [user, password]);
+  }, [organizationName, password, firstName, lastName]);
 
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
+      if (!token) {
+        setError("Token missing. Please check your verification link.");
+        return;
+      }
+
       try {
-        const response = await apiClient.post(
-          REGISTER_URL,
-          JSON.stringify({ user, password }),
+        const response = await axios.post(
+          `${baseUrl}/api/user/complete-profile/${token}`,
+          { organizationName, password, firstName, lastName },
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
           }
         );
 
-        setUser("");
+        console.log("Profile completion response:", response.data);
+        setOrganizationName("");
         setPassword("");
-        console.log(JSON.stringify(response?.data));
+        setFirstName("");
+        setLastName("");
         setSuccess(true);
       } catch (err: any) {
-        setError("Login failed. Please check your credentials.");
-        console.error("Login error:", err);
+        const errorMsg =
+          err.response?.data?.message ||
+          "Profile completion failed. Please try again.";
+        setError(errorMsg);
+        console.error(
+          "Profile completion error:",
+          err.response?.data || err.message
+        );
       }
     },
-    [user, password]
+    [organizationName, password, firstName, lastName, token]
   );
 
   if (success) {
     return <EmailConfirmation />;
+  }
+
+  if (!token) {
+    return (
+      <p>Invalid or missing token. Please check your verification link.</p>
+    );
   }
 
   return (
@@ -82,7 +90,8 @@ const LoginForm = () => {
           Calm and productive <br />
           email experience for your team
         </h2>
-        {/* {error && <p ref={errRef} className="error">{error}</p>} */}
+
+        {error && <p className="error">{error}</p>}
 
         <form onSubmit={handleSubmit}>
           <div className="contcon2">
@@ -91,8 +100,8 @@ const LoginForm = () => {
               text="Enter Company name"
               forgot=""
               ref={userRef}
-              value={user}
-              onChange={(e) => setUser(e.target.value)}
+              value={organizationName}
+              onChange={(e) => setOrganizationName(e.target.value)}
               type="text"
             />
           </div>
@@ -129,7 +138,7 @@ const LoginForm = () => {
             />
           </div>
 
-          <Button text="Start your 14 days trial" />
+          <Button text="Start your 14 days trial" type="submit" />
         </form>
 
         <p className="signup-terms">
@@ -141,4 +150,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default CompleteProfileForm;

@@ -1,42 +1,54 @@
-// CompleteAccount.tsx
-import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
+import axios from "axios";
 
-export const CompleteAccount = () => {
-  const { token } = useParams();
+const baseUrl = "https://stage.api.withavail.com";
+
+const EmailVerificationPage: React.FC = () => {
+  const { token } = useParams<{ token: string }>();
   const navigate = useNavigate();
-  const [valid, setValid] = useState<boolean | null>(null);
-  const [error, setError] = useState('');
-
-  const loginUrl = "https://stage.api.withavail.com";
+  const location = useLocation();
+  const apiCalledRef = useRef(false);
 
   useEffect(() => {
-    const validateToken = async () => {
+    const verifyToken = async () => {
+      if (!token) {
+        console.error("No token found in URL params.");
+        navigate("/", { state: { from: location.pathname } });
+        return;
+      }
+
       try {
-        const res = await fetch(`/${loginUrl}/auth/validate-token/${token}`);
-        const data = await res.json();
-        if (res.ok) {
-          setValid(true);
-        } else {
-          setValid(false);
-          setError(data.message || 'Invalid token');
-        }
-      } catch (err) {
-        setValid(false);
-        setError('Validation failed');
+        console.log("Verifying token:", token);
+        const response = await axios.post(
+          `${baseUrl}/api/user/verify-email/${token}`
+        );
+
+        console.log("Token verification successful:", response.data);
+
+        // Navigate to profile completion form with token in state
+        navigate("/last", {
+          state: {
+            token: response.data.data.token,
+            from: location.pathname,
+          },
+        });
+      } catch (error: any) {
+        console.error(
+          "Token verification failed:",
+          error.response?.data || error.message
+        );
+        navigate("/", { state: { from: location.pathname } });
       }
     };
 
-    validateToken();
-  }, [token]);
-
-  useEffect(() => {
-    if (valid) {
-      navigate('/');
+    if (!apiCalledRef.current) {
+      apiCalledRef.current = true;
+      verifyToken();
     }
-  }, [valid, navigate, token]);
+  }, [token, navigate, location]);
 
-  if (valid === null) return <p>Validating token...</p>;
-  if (!valid) return <p>{error}</p>;
-  return null;
+  return <div>Verifying email... Please wait.</div>;
 };
+
+export default EmailVerificationPage;

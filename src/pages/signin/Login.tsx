@@ -1,24 +1,16 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import "./Login.css"
+import "./Login.css";
 import head from "../signup/head.png";
 import Button from "../../button";
 import Input from "../../assets/input";
 import EmailConfirmation from "../signup/Email";
-import AuthContext from "../AuthProvider";
+import AuthContext from "../Authlayout";
 import apiClient from "../../api/axios";
 
 const LOGIN_URL = "/api/user/login";
 
 const LoginForm = () => {
-  const authContext = useContext(AuthContext);
-
-  if (!authContext) {
-    throw new Error("AuthContext must be used within an AuthProvider");
-  }
-
-  const { setAuth } = authContext;
-
   const userRef = useRef<HTMLInputElement>(null);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -34,23 +26,23 @@ const LoginForm = () => {
     setError(null);
   }, [email, password]);
 
-  const loginUrl = 'https://stage.api.withavail.com'
+  const loginUrl = "https://stage.api.withavail.com";
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const res = await fetch(`${loginUrl}/api/user/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email,password }),
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
       });
       const data = await res.json();
       if (res.ok) {
-        setMessage('Check your email for the registration link.');
+        setMessage("Check your email for the registration link.");
       } else {
-        setMessage(data.message || 'Something went wrong.');
+        setMessage(data.message || "Something went wrong.");
       }
     } catch (err) {
-      setMessage('Error sending email.');
+      setMessage("Error sending email.");
     }
   };
 
