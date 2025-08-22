@@ -31,44 +31,53 @@ const CompleteProfileForm: React.FC = () => {
     if (error) setError(null);
   }, [organizationName, password, firstName, lastName]);
 
-  const handleSubmit = useCallback(
-    async (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
+const handleSubmit = useCallback(
+  async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-      if (!token) {
-        setError("Token missing. Please check your verification link.");
-        return;
+    if (!token) {
+      setError("Token missing. Please check your verification link.");
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `${baseUrl}/api/user/complete-profile/${token}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include", // replaces axios withCredentials: true
+          body: JSON.stringify({
+            organizationName,
+            password,
+            firstName,
+            lastName,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Profile completion failed.");
       }
 
-      try {
-        const response = await axios.post(
-          `${baseUrl}/api/user/complete-profile/${token}`,
-          { organizationName, password, firstName, lastName },
-          {
-            headers: { "Content-Type": "application/json" },
-            withCredentials: true,
-          }
-        );
+      const data = await response.json();
+      console.log("Profile completion response:", data);
 
-        console.log("Profile completion response:", response.data);
-        setOrganizationName("");
-        setPassword("");
-        setFirstName("");
-        setLastName("");
-        setSuccess(true);
-      } catch (err: any) {
-        const errorMsg =
-          err.response?.data?.message ||
-          "Profile completion failed. Please try again.";
-        setError(errorMsg);
-        console.error(
-          "Profile completion error:",
-          err.response?.data || err.message
-        );
-      }
-    },
-    [organizationName, password, firstName, lastName, token]
-  );
+      setOrganizationName("");
+      setPassword("");
+      setFirstName("");
+      setLastName("");
+      setSuccess(true);
+    } catch (err: any) {
+      setError(err.message || "Profile completion failed. Please try again.");
+      console.error("Profile completion error:", err.message);
+    }
+  },
+  [organizationName, password, firstName, lastName, token]
+);
 
   if (success) {
     return <EmailConfirmation />;
