@@ -5,9 +5,6 @@ import head from "../signup/head.png";
 import Button from "../../button";
 import Input from "../../assets/input";
 import EmailConfirmation from "../signup/Email";
-import axios from "axios";
-
-const baseUrl = "https://stage.api.withavail.com";
 
 const CompleteProfileForm: React.FC = () => {
   const userRef = useRef<HTMLInputElement>(null);
@@ -31,62 +28,57 @@ const CompleteProfileForm: React.FC = () => {
     if (error) setError(null);
   }, [organizationName, password, firstName, lastName]);
 
-const handleSubmit = useCallback(
-  async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
 
-    if (!token) {
-      setError("Token missing. Please check your verification link.");
-      return;
-    }
+      if (!token) {
+        setError("Token missing. Please check your verification link.");
+        return;
+      }
 
-    try {
-      const response = await fetch(
-        `${baseUrl}/api/user/complete-profile/${token}`,
-        {
+      try {
+        const response = await fetch(`/api/user/complete-profile/${token}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          credentials: "include", // replaces axios withCredentials: true
           body: JSON.stringify({
             organizationName,
             password,
             firstName,
             lastName,
           }),
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.message || "Profile completion failed.");
         }
-      );
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Profile completion failed.");
+        const data = await response.json();
+        console.log("Profile completion response:", data);
+
+        // Reset form fields
+        setOrganizationName("");
+        setPassword("");
+        setFirstName("");
+        setLastName("");
+        setSuccess(true);
+      } catch (err: any) {
+        setError(err.message || "Profile completion failed. Please try again.");
+        console.error("Profile completion error:", err.message);
       }
-
-      const data = await response.json();
-      console.log("Profile completion response:", data);
-
-      setOrganizationName("");
-      setPassword("");
-      setFirstName("");
-      setLastName("");
-      setSuccess(true);
-    } catch (err: any) {
-      setError(err.message || "Profile completion failed. Please try again.");
-      console.error("Profile completion error:", err.message);
-    }
-  },
-  [organizationName, password, firstName, lastName, token]
-);
+    },
+    [organizationName, password, firstName, lastName, token]
+  );
 
   if (success) {
     return <EmailConfirmation />;
   }
 
   if (!token) {
-    return (
-      <p>Invalid or missing token. Please check your verification link.</p>
-    );
+    return <p>Invalid or missing token. Please check your verification link.</p>;
   }
 
   return (
