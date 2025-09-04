@@ -8,12 +8,15 @@ import Forgot from "./pages/forgot/Forgot";
 import CheckInbox from "./pages/forgot/Check";
 import ResetPassword from "./pages/forgot/Setnew";
 import EmailVerificationPage from "./pages/signup/CompleteAccount";
+import LoginForm from "./pages/signin/Login";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
+          
+          <Route path="/login" element={<LoginForm />} />
           <Route path="/" element={<Signup />} />
           <Route path="/emailconfirm" element={<EmailConfirmation />} />
           <Route path="/last" element={<CompleteProfileForm />} />

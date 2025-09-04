@@ -10,7 +10,7 @@ function EmailConfirmation() {
     <div className="email-confirmation-container">
       <div className="email-confirmation-content">
         <div className="email-confirmation-icon"></div>
-        <Link to="" className="email-confirmation-title">
+        <Link to="/login" className="email-confirmation-title">
           Check your inbox!
         </Link>
         <p className="email-confirmation-message">
